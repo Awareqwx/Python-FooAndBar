@@ -1,3 +1,5 @@
+import sys
+
 def primeTest(x):
     if(x % 2 == 0):
         return False
@@ -11,8 +13,8 @@ print()
 squNum = 100
 squAdd = 21
 i = 100
-while i <= 100000:
-    print(i, ": ", end="")
+for i in range (0, 100001):
+    sys.stdout.write(str(i) + ": ")
     if i == squNum:
         print("Bar")
         squNum += squAdd
@@ -21,4 +23,3 @@ while i <= 100000:
         print("Foo")
     else:
         print("FooBar")
-    i += 1
